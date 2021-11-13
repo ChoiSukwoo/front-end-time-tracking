@@ -9,25 +9,41 @@ import { ReactComponent as SelfSvg } from '../images//icon-self-care.svg';
 
 const View = styled.div`
     display: flex;  flex-direction: column; justify-content: flex-start; position: relative;
-    width: 17.7vw;  height: 16.94vw;
+    @media screen and (min-width:768px){
+        min-width: 225px;   max-width: 450px; min-height:244px; max-height:488px;  width: 17.7vw;  height: 16.94vw;
+    }
+    @media screen and (max-width:768px){
+        width: 100%; height: 42.66vw;
+    }
 `
 
 const Head = styled.div`
     display: flex;  justify-content: flex-end;  overflow: hidden;
-    min-width: 225px;   max-width: 450px;   width: inherit; height: 11.11vw;    border-radius: 15px; 
+    min-width: 225px;   max-width: 450px; min-height:160px; max-height:320px;  width: inherit; height: 11.11vw;    border-radius: 15px; 
     background-color: ${props => props.headColor};
 `
 
 const SvgCover = styled.div`
     position: relative;
-    top: -0.41vw;
+    top: -2.9vw;
 `
 
 const Content = styled.div`
-    display:flex;   flex-direction: column; position:absolute;  bottom: 0; row-gap: 1.66vw;
-    min-width: 225px;   max-width: 450px;  width: inherit; height: 13.82vw; border-radius: 15px;    padding: 2vw 2.43vw 0 2.1vw;
+    display:flex;   flex-direction: column; position:absolute;  bottom: 0;
     background-color: #1C204B;
     color: #fff;
+    cursor: pointer;
+    &:hover{
+        background-color: #33397A;
+    }
+    @media screen and (min-width:768px){
+        row-gap: 1.66vw;
+        min-width: 225px;   max-width: 450px;  min-height:199px; max-height:398px; width: inherit; height: 13.82vw; border-radius: 15px;    padding: 2vw 2.43vw 0 2.1vw;
+    }
+    @media screen and (max-width:768px){
+        justify-content:space-between;
+        width:100%; height: 32.53vw; border-radius: 15px; padding: 7.46vw 6.4vw;
+    }
 `
 
 const TypeCover = styled.div`
@@ -40,34 +56,42 @@ const Type = styled.div`
 `
 
 const MiniCycleCover = styled.div`
-    column-gap: 0.1vw;
+    column-gap: 3px;
 `
 
 const MiniCycle = styled.div`
-    width: 0.4vw; height: 0.4vw;    
+    width: 5px; height: 5px;    
     background-color: #BBC0FF;  border-radius: 50%;
 `
 
 const TimeCover = styled.div`
-    display: flex;  flex-direction:column;  row-gap: 0.66vw;
+    @media screen and (min-width:768px){
+        display: flex;  flex-direction:column;  row-gap: 0.66vw;
+    }
+    @media screen and (max-width:768px){
+        display: flex;  justify-content: space-between; align-items: center;
+    }
 `
 
 const CurrentTime = styled.div`
     font-size: 56px;    font-weight: 300;
+    @media screen and (max-width:768px){
+        font-size: 32px;
+    }
 `
 
 const PreviousTime = styled.div`
-    font-style: 15px;   font-weight: 400;   color: #BBC0FF;
+    font-size: 15px;   font-weight: 400;   color: #BBC0FF;
 `
 
-function TimeTrackView({ TimeTrackData, DayType }) {
-
-    let currentTime = TimeTrackData.timeframes[DayType].current
-    let previousTime = TimeTrackData.timeframes[DayType].previous
+function TimeTrackView({ timeTrackData, dayType }) {
+    
+    let currentTime = timeTrackData.timeframes[dayType].current
+    let previousTime = timeTrackData.timeframes[dayType].previous
     let headColor
     let headSvg
 
-    switch(TimeTrackData.title){
+    switch(timeTrackData.title){
         case 'Work':
             headColor = '#FF8B64'
             headSvg = <WorkSvg/>
@@ -102,7 +126,7 @@ function TimeTrackView({ TimeTrackData, DayType }) {
             </Head>
             <Content>
                 <TypeCover>
-                    <Type>{TimeTrackData.title}</Type>
+                    <Type>{timeTrackData.title}</Type>
                     <MiniCycleCover className="center"><MiniCycle /><MiniCycle /><MiniCycle /></MiniCycleCover>
                 </TypeCover>
                 <TimeCover>

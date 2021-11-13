@@ -2,15 +2,15 @@
   {
     "title": "Work",
     "timeframes": {
-      "daily": {
+      "Daily": {
         "current": 5,
         "previous": 7
       },
-      "weekly": {
+      "Weekly": {
         "current": 32,
         "previous": 36
       },
-      "monthly": {
+      "Monthly": {
         "current": 103,
         "previous": 128
       }
@@ -19,15 +19,15 @@
   {
     "title": "Play",
     "timeframes": {
-      "daily": {
+      "Daily": {
         "current": 1,
         "previous": 2
       },
-      "weekly": {
+      "Weekly": {
         "current": 10,
         "previous": 8
       },
-      "monthly": {
+      "Monthly": {
         "current": 23,
         "previous": 29
       }
@@ -36,15 +36,15 @@
   {
     "title": "Study",
     "timeframes": {
-      "daily": {
+      "Daily": {
         "current": 0,
         "previous": 1
       },
-      "weekly": {
+      "Weekly": {
         "current": 4,
         "previous": 7
       },
-      "monthly": {
+      "Monthly": {
         "current": 13,
         "previous": 19
       }
@@ -53,15 +53,15 @@
   {
     "title": "Exercise",
     "timeframes": {
-      "daily": {
+      "Daily": {
         "current": 1,
         "previous": 1
       },
-      "weekly": {
+      "Weekly": {
         "current": 4,
         "previous": 5
       },
-      "monthly": {
+      "Monthly": {
         "current": 11,
         "previous": 18
       }
@@ -70,15 +70,15 @@
   {
     "title": "Social",
     "timeframes": {
-      "daily": {
+      "Daily": {
         "current": 1,
         "previous": 3
       },
-      "weekly": {
+      "Weekly": {
         "current": 5,
         "previous": 10
       },
-      "monthly": {
+      "Monthly": {
         "current": 21,
         "previous": 23
       }
@@ -87,15 +87,15 @@
   {
     "title": "Self Care",
     "timeframes": {
-      "daily": {
+      "Daily": {
         "current": 0,
         "previous": 1
       },
-      "weekly": {
+      "Weekly": {
         "current": 2,
         "previous": 2
       },
-      "monthly": {
+      "Monthly": {
         "current": 7,
         "previous": 11
       }
