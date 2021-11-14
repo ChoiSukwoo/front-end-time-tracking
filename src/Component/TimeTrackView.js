@@ -24,13 +24,18 @@ const Head = styled.div`
         min-width: 225px;   max-width: 450px; min-height:160px; max-height:320px;  width: inherit; height: 11.11vw;    border-radius: 15px; 
     }
     @media screen and (max-width:768px){
-        width: 100%;    height: inherit;
+        width: 100%;    height: inherit;   border-radius: 15px; 
     }
 `
 
 const SvgCover = styled.div`
     position: relative;
-    top: -2.9vw;
+    @media screen and (min-width:768px){
+        top: -11px;
+    }
+    @media screen and (max-width:768px){
+        top: -14.5px;
+    }
 `
 
 const Content = styled.div`
