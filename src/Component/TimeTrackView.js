@@ -19,8 +19,13 @@ const View = styled.div`
 
 const Head = styled.div`
     display: flex;  justify-content: flex-end;  overflow: hidden;
-    min-width: 225px;   max-width: 450px; min-height:160px; max-height:320px;  width: inherit; height: 11.11vw;    border-radius: 15px; 
     background-color: ${props => props.headColor};
+    @media screen and (min-width:768px){
+        min-width: 225px;   max-width: 450px; min-height:160px; max-height:320px;  width: inherit; height: 11.11vw;    border-radius: 15px; 
+    }
+    @media screen and (max-width:768px){
+        width: 100%;    height: inherit;
+    }
 `
 
 const SvgCover = styled.div`
